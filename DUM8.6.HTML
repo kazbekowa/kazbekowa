@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text"></h1>
+    <script>
+        const TEXT = 'Future director of the company ERKINAI KAZBEKOWA';
+        const ELEMENT = document.getElementsByTagName('span');
+        let index = 0;
+        for (let i = 0; i < TEXT.length; i++){
+            text.innerHTML += `<span>${TEXT[i]}</span>`;
+        }
+        document.body.onkeypress = (coin) => {
+        
+        if(ELEMENT[index].innerHTML == coin.key ){
+                ELEMENT[index].style.color = 'blue' 
+             }else{
+                ELEMENT[index].style.color = 'red' 
+             }
+             index++
+          
+         }
+    </script>
+</body>
+</html>

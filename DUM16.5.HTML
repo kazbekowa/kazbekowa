@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 290px;
+            height: 350px;
+             justify-content: center;
+             box-shadow: 3px 3px 3px black;
+             border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div style="display: flex; position: fixed;
+        z-index: 1; justify-content: end;">
+            <input value id="wrapper" placeholder="menu"/>
+             <button onclick="myFunction()">Ok</button>
+        </div>
+    </div>
+    <div style=" display: flex; flex-wrap: wrap;" id="div">
+
+    </div>
+    <script>
+        document.getElementById('div')
+        document.getElementById('wrapper')
+    let mass = [
+            {
+                title: 'teslo1',
+                price: '2000000',
+                img: 'https://icdn.lenta.ru/images/2020/11/27/18/20201127181833572/square_768_96d6a6bcc7cfafa1e53e0ee093e11f74.jpg',
+            },
+            {
+                title: 'teslo2',
+                price: '3000000',
+                img: 'https://platfor.ma/images/doc/b/7/b7576d8-004.jpg',
+            },
+            {
+                title: 'teslo3',
+                price: '4000000',
+                img: 'https://www.ixbt.com/img/n1/news/2022/0/1/5f6c5369ec05c4fe2700000f_large.jpg',
+            },
+            {
+                title: 'teslo4',
+                price: '5000000',
+                img: 'https://icsb.org/wp-content/uploads/2020/04/Canva-Person-Typing-on-Laptop-Computer-Near-Mug-on-Glass-Table-scaled.jpg',
+            },
+            {
+                title: 'teslo5',
+                price: '6000000',
+                img: 'https://motor.ru/imgs/2021/02/12/14/4510736/39446fb5ac3dfd5418b6dc8689d82d27374db5d5.jpg',
+            },
+            {
+                title: 'teslo6',
+                price: '7000000',
+                img: 'https://cdnimg.rg.ru/img/content/224/53/71/54_d_850.jpg',
+            },
+            {
+                title: 'teslo7',
+                price: '8000000',
+                img: 'https://cdn.motor1.com/images/mgl/4Vlgk/s1/4x3/tesla-model-x-first-drive.webp',
+            },
+            {
+                title: 'teslo8',
+                price: '9000000',
+                img: 'https://electrek.co/wp-content/uploads/sites/3/2021/05/Tesla-Logo-Hero.jpg?quality=82&strip=all&w=1000',
+            },
+            {
+                title: 'teslo9',
+                price: '10000000',
+                img: 'https://www.akchabar.kg/media/news/c10fd8f6-6d47-420f-be34-3ec569eff003.jpg',
+            },
+            {
+                title: 'teslo10',
+                price: '11000000',
+                img: 'https://images11.popmeh.ru/upload/custom/d62/d62cadd2579e5ae83b5e136703a483ab.jpg',
+            },
+        ]
+        
+            mass.map(e => {
+                div.innerHTML += 
+                `<div style=' border: 1px solid black; border-radius: 20px; width: 290px; margin-top: 70px; margin-left:20px; height: 400px'>
+                    <img class="card" src="${e.img}"/>
+                    <div>
+                        <div style='text-align: center;'>${e.title}</div>
+                        <div  style='text-align: center;'>${e.price}</div>
+                    </div>
+                </div>`
+
+            })
+
+            function myFunction (){
+                let ff = mass.filter(e => e.title.includes(wrapper.value))
+                console.log(ff)
+                div.innerHTML = ''; 
+                ff.map(e => {
+                div.innerHTML += 
+                `<div style=' border: 1px solid black; box-shadow: 3px 3px 3px black; width: 290px; margin-top: 70px; margin-left:20px; height: 400px'>
+                    <img class="card" src="${e.img}"/>
+                    <div>
+                        <span>${e.title}</span>
+                        <span>${e.price}</span>
+                </div>`
+            })
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		let numbers = +prompt('number')
+		let text = +prompt('text')
+		let ak =  (text == '2' || text == '4'||text == '6'|| text == '8')
+		let kara = (text == '1'||text == '3'||text == '5'|| text == '7')
+
+
+		if(numbers % 2 == 0 && ak){
+			alert('ak')
+		}else if (numbers%2 == 1 && kara ){
+			alert('kara')
+		}else if (numbers%2 == 1 && ak){
+			alert('ak')
+		}else if (numbers%2 == 0 && kara){
+			alert('kara')
+		}
+	</script>
+</body>
+</html>

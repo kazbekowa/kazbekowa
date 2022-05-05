@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input id="input" type="text" name="">
+	<button class="but" onclick="name_()">Добавить</button>
+	<div id="asan"></div>
+	<ol id="uson"></ol>
+	<script type="text/javascript">
+		let d = document.getElementById('input')
+		let p = document.getElementById('asan')
+		let r = document.getElementById('uson')
+		let m = 10;
+	function name_(){
+		if (d.value == 'Sadyr') {
+			r.innerHTML += `<li>${'Kyrgyzstandyn prezidenti'}</li>`
+			d.value = '';
+
+		}else if(d.value == 'Putin'){
+			r.innerHTML = `<li>${'Rossianyn prezidenti'}</li>`
+			d.value = '';
+		}else if(d.value == 'Amazon'){
+			r.innerHTML = `<li>${'Jeff Bezos'}</li>`
+			d.value = '';
+		}
+		
+	}
+</script>
+</body>
+</html>

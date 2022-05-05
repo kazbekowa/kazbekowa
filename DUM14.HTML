@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            position: absolute;
+            left: 430px;
+            top: 100px;
+            width: 530px;
+            height: 450px;
+            border: 1px solid black;
+            border-radius: 50px;
+            background-color: yellow;
+        }
+        .wrapper{
+            position: absolute;
+            top: 50px;
+            left: 17px;
+            font-size: 60px;
+            color: red;
+            text-shadow: 6px 5px 5px black;
+        }
+        .life{
+            position: absolute;
+            left: 10px;
+            top: 160px;
+            width: 500px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .question{
+            position: absolute;
+            left: 10px;
+            top: 250px;
+            width: 500px;
+            height: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .namen{
+            position: absolute;
+            top: 350px;
+            left: 190px;
+            width: 160px;
+            height: 58px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">
+        <span class="wrapper">Войдите в систему</span>
+        <input class="life" placeholder="TEXT"/>
+        <input class="question" placeholder="TEXT"/>
+        <button class="namen">Войти</button>
+    </div>
+    <input id="inp" value="green" type="checkbox"/>
+    <label for="inp">green</label>
+
+    <input id="inp2" value="red" type="checkbox"/>
+    <label for="inp2">red</label>
+
+    <input id="inp3" value="violet" type="checkbox"/>
+    <label for="inp3">violet</label>
+    <script>
+                let body_ = document.body
+        inp.onclick = function(e){
+            checkbox_(e.target.value, e.target.checked)
+                }
+        inp2.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)     
+           }
+        inp3.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)
+        }
+        function checkbox_ (e, b){
+console.log(e)
+                if(e == 'red' && b  == true){
+                    body_.style.backgroundColor = 'red'
+                    inp.checked = false;
+                    inp3.checked = false;
+
+                }else if(e == 'green' && b ==true){
+                    body_.style.backgroundColor = 'green'
+                    inp3.checked = false;
+                    inp2.checked = false;
+                }else if(e == 'violet' && b ==true){
+                    body_.style.backgroundColor = 'violet'
+                    inp2.checked = false;
+                    inp.checked = false;
+                }else{
+                    body_.style.backgroundColor = 'white'
+                }
+        }
+    </script>
+</body>
+</html>

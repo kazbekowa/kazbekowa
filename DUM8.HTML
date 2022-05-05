@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div id="p">
+		
+	</div>
+	<script type="text/javascript">
+		let body_ = document.body;
+		let p = document.getElementById('p')
+		
+			
+			body_.onkeypress = (asan) => {
+				body_.innerHTML += asan.key
+				console.log(asan)
+				let text = '';
+			// if(asan.keyCode == 13){
+			// 	p.innerHTML =d.value
+			// 	d.value = '';
+			// }
+		}
+	</script>
+</body>
+</html>

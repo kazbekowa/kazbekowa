@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+    <style>
+        .card{
+            width: 200px;
+            height: auto;
+            margin: 10px;
+            border-radius: 8px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 10px red;
+        }
+        .img_{
+            width: 200px;
+            height: 250px;
+        }
+      .coin{
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
+    <!-- <input style="width: 200px; height: 60px; border: 2px solid black; background-color:rgb(246, 250, 8);  position: absolute; left: 600px; top: 50px; " id="in1" placeholder="IMG">  -->
+    <input style="width: 200px; height: 60px; border: 2px solid black; background-color: violet; position: absolute; left: 600px; top: 130px; " id="text" placeholder="TEXT">
+    <button style="width: 50px; height: 30px; border: 2px solid black; background-color: rgba(66, 253, 9, 0.973); position: absolute; left: 684px; top: 210px; border-radius: -100px;" onclick="add()">OK</button>
+    <!-- <div style="width: 700px; border-radius: 15px; height: 550px; border: 1px solid black; position: absolute; top: 270px; left: 365px;" > -->
+        <!-- <img style="width: 700px; height: 550px; top: 350px; left: 365px;" src="https://www.pngmart.com/files/9/Olaf-Snowman-PNG-File.png"> -->
+    </div>
+    <div id="item" style="display: flex; flex-wrap: wrap; margin-top: 50px;">
+        <!-- <ol id="text">
+            
+        </ol> -->
+    </div>
+    <script>
+        let a = [
+            {title: 'tesla', img: 'https://avatars.mds.yandex.net/get-zen_doc/1362253/pub_5ebf261209f92703ddb9e24a_5ebf261b2cc6216518c56123/scale_1200'},
+            {title: 'bmw', img: 'https://foto.carexpert.ru/img/foto1680/bmw/bmw4245.jpg'},
+            {title: 'tesla', img: 'https://artdecory.ru/pictures/full_01-242_Tesla_Racing.jpg&t=1&bst=1'},
+        ]
+        let wrapper = document.getElementById('in1')
+        let inp = document.getElementById('text')
+        const ELEMENT = document.getElementById('text')
+        // let r = ({key: 'https://cdn.freshfruitportal.com/2019/06/amazon_PNG6.png'})
+        // let a = [];
+    
+       
+        function urmat (){
+            item.innerHTML  = ''
+             for(let i = 0; i < a.length; i++){
+            item.innerHTML  += `<div class="card">
+                <img class="img_" src="${a[i].img}"/>
+                <h1 class="coin">${a[i].title}</h1>
+            </div>`
+            }
+        }
+            urmat()
+        function add(){
+            //  a.push(
+            //      {text:inp.value, img:wrapper.value},
+            // )
+           
+           a = a.filter(e => text.value == '' ? true : e.title == text.value)
+        urmat()
+        // function urmat (){
+        //      for(let i = 0; i < a.length; i++){
+        //     item.innerHTML  += `<div class="card">
+        //         <img class="img_" src="${a[i].img}"/>
+        //         <h1 class="coin">${namen[i].text}</h1>
+        //     </div>`
+        // }
+        // }
+       
+       
+            // inp.value = '';
+            
+            // ELEMENT.innerHTML = '';
+            // a.map((e, i)=>{
+            // ELEMENT.innerHTML +=  i%2 == 0 ? `<li  style= 'color: green'>${e}</li>`
+            //  :
+            // `<li style= 'color: red'>${e}</li>`
+            // console.log(a)
+           }
+        
+        </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Nunito+Sans:wght@200&family=Pacifico&family=Redressed&family=Russo+One&family=Syne+Tactile&family=Ubuntu+Condensed&display=swap" rel="stylesheet">
+	<style type="text/css">
+		.but{
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+		}
+		.text{
+			position: absolute;
+			left: 40%;
+			top: 45%;
+			font-size: 100px;
+
+		}
+		.wrapper{
+			position: absolute;
+			
+			bottom: 20px;
+		}
+	</style>
+</head>
+<body>
+	<button class="but" id="uson" onclick="name_()">Добавить</button>
+	<button class="wrapper" id="card" onclick="namel()">Шрифты</button>
+	<div class="text" id="asan"></div>
+	<script type="text/javascript">
+		let truee = prompt('answer the question')
+		let div = document.getElementById('asan')
+		div.innerHTML = truee
+		let uson = document.getElementById('uson')
+		let color = document.getElementById('card')
+		// let d = document.getElementById('asan')
+			let r = ['red', 'green', 'yellow', 'blue', 'pink','violet', 'skyblue',]
+			let font = ["'Kalam', cursive", "'Nunito Sans', sans-serif","'Pacifico', cursive","'Redressed', cursive","'Russo One', sans-serif","'Syne Tactile', cursive", "'Ubuntu Condensed', sans-serif"]
+			let n = 0;
+			let m = 0;
+			function name_(){
+				document.body.style.backgroundColor = r[n];
+				uson.innerHTML = r[n];
+				n >= r.length - 1 ? n = 0 : n++;
+				
+
+			}
+
+			function namel(){
+				div.style.fontFamily = font[m]
+				card.innerHTML = font[m]
+				m >= font.length - 1 ? m = 0 : m++;
+			}
+	</script>
+</body>
+</html>

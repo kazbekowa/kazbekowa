@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div_" style="text-align: center; font-size: 200px; margin-top: 150px;">
+        00:00
+    </div>
+    <script>
+         let west = 00;
+         let west1 = 00;
+         let body_ = document.body
+         let div_ = document.getElementById('div_')
+        //  var isAdmin = confirm("Вы - администратор?");
+
+
+        //  setInterval(() => {
+        //     div_.innerHTML = `<div>${west--}</div>`
+        // if(west == 0){
+        //   west = 10;   
+        // }
+      const dd =  setInterval(() => {
+        west++
+            div_.innerHTML = `<div>${west1 >9? west1 : '0' + west1} : ${west >9? west: '0' +west}</div>`
+            // div_.innerHTML += '<div></div>'
+            // west.innerTEXT = '00:00';            
+            // west.disabled = true;
+            // div_.style.color = 'red'
+            if(west == 60){
+                west1++
+                west = 00
+            }
+            if(west1 == 60){
+                west++
+                west = 00
+            }
+      }, 100);
+        
+        // alert( isAdmin );
+        // setTimeout(() => {
+        //     clearInterval(dd)
+        // }, 5000);
+        
+        // if(west == 8){
+        //     body_.style.backgroundColor = 'blue'
+    
+        // }else if(west == 6){
+        //     body_.style.backgroundColor = 'violet'
+
+        // }else if(west == 4){
+        //     document.body.style.backgroundColor = 'green'
+
+        // }else if(west == 2){
+        //     document.body.style.backgroundColor = 'yellow'
+            
+        // }    
+    // }, 500)
+    </script>
+</body>
+</html>

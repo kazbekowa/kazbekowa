@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.text{
+			position: absolute;
+
+			width: 130px;
+			height: 130px;
+			border: 1px solid black;
+			background-color: red;
+			overflow: hidden;
+		}
+		.wrapper{
+			width: 550px;
+			height: 500px;
+			border: 1px solid black;
+			overflow: hidden;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="t" class="text">
+		
+		</div>
+	</div>
+	<script type="text/javascript">
+		let body_ = document.body;
+		let text = document.getElementById('t')
+		let top_ = 0;
+		let left_ = 0;
+		let coin = 0;
+		body_.onkeydown = (asan) => {
+		
+			if(asan.keyCode == 40){
+				top_ += 10;
+				text.style.top = `${top_}px`
+			}
+
+			if(asan.keyCode == 39){
+				left_ += 10;
+				text.style.left = `${left_}px`
+			}
+
+			if(asan.keyCode == 37){
+				left_ -= 10;
+				text.style.left = `${left_}px`
+			}
+
+			if(asan.keyCode == 38){
+				top_ -= 10;
+				text.style.top = `${top_}px`
+			}
+			if (top_ == 500){
+				top_ = -100
+			}else if(top_ == -100){
+				top_ = 500
+			}
+			if (left_ == 500){
+				left_ = -100
+			}else if(left_ == -100){
+				left_ = 500
+			}
+		}
+	</script>
+</body>
+</html>

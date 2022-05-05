@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.text{
+			/*display: flex;*/
+			margin-left: 450px;
+			margin-top: 160px;
+			width: 500px;
+			height: 350px;
+			border: 1px solid black;
+			border-radius: 20px;
+			background-color: #C0C0C0;
+		}
+		.wrapper{
+			font-size: 45px;
+			text-align: center;
+
+		}
+		.people{
+			margin-left: 20px;
+			width: 450px;
+			height: 50px;
+			border-radius: 18px;
+			border: 1px solid black;
+		}
+		.loving{
+			margin-left: 20px;
+			width: 450px;
+			height: 50px;
+			border-radius: 18px;
+			border: 1px solid black;
+			margin-top: 15px;
+		}
+		.loved{
+			margin-left: 200px;
+			width: 100px;
+			height: 50px;
+			border-radius: 18px;
+			border: 1px solid black;
+			margin-top: 15px;
+		}
+		.world{
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="text">
+		<p class="wrapper">Войдите в систему</p>
+		<input class="people" id="inpp" placeholder="ЛОГИН" type="text" name="">
+		<input class="loving" id="inpt" placeholder="ПАРОЛЬ" type="password" name="">
+		<button class="loved" id="inptt" onclick="vait()" type="textt" disabled>ВОЙТИ</button>
+	</div>
+	<div id="div"></div>
+	<script type="text/javascript">
+			let mess = [
+				{
+					login: 'text',
+					parol: 2006
+				},
+				{
+					login: 'text',
+					parol: 2006
+				},
+				{
+					login: 'text',
+					parol: 2006
+				},
+			]
+		let inpp = document.getElementById('inpp')
+		let inpt = document.getElementById('inpt')
+		let inptt = document.getElementById('inptt')
+		let div = document.getElementById('div')
+
+		inpp.oninput = function(){
+			inpp.value.length >= 1 ? inptt.disabled = false :
+			inptt.disabled = true	
+		}
+		inpt.oninput = function(){
+			inpt.value.length >= 1 ? inptt.disabled = false :
+			inptt.disabled = true 
+		}
+		function vait(){
+			for(let i = 0; i < mess.length; i++){
+			if(inpt.value == mess[i].log && inptt.value == mess[i].inptt){
+				div.innerHTML = 'hello world'
+				i += mess.length;
+			}else{
+				div.innerHTML = ''
+			}
+			}
+		}
+	</script>
+</body>
+</html>

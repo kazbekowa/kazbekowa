@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+#asan{
+	display: flex; 
+	justify-content: center;
+	text-align: center;
+	font-size: 80px;
+	color: red;
+}
+</style>
+</head>
+<body>
+	<input id="uson" />
+	<!-- <div id="asan" ></div> -->
+	<button id="sa" disabled ='false'>ok</button>
+	<script type="text/javascript">
+		let inp = document.getElementById('uson')
+		let coin = document.getElementById('sa')
+		inp.oninput = function(){
+			if(inp.value.length > 3 ){
+				coin.disabled = false;
+			}else{
+				coin.disabled = true;
+			}
+		}
+
+	</script>
+</body>
+</html>

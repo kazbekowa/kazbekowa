@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.tr{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 100px;
+			background-color: #00FF00;
+			font-size: 100px;
+			text-align: center;
+		}
+		#div2{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 100px;
+			background-color: #FFFF00;
+		}
+		.br{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			border-radius: 100px;
+			background-color: #FF00FF;
+			font-size: 100px;
+		}
+		.br1{
+			display: flex;
+		}
+	</style>
+</head>
+<body>
+	<div class="br1">
+	<button class="tr" id="div" onclick="namee()">-</button>
+	<div id="div2"  style="text-align: center; font-size: 150px; color: red;"></div>
+	<button class="br" id="div1" onclick="name_()">+</button>
+</div>
+	<script type="text/javascript">
+		let text = document.getElementById('div2');
+		// let wrapper = document.getElementById('div');
+		// let index = document.getElementById('div1')
+		let n = 0;
+		function name_(){
+			n += 1
+			text.innerHTML = n;
+		
+		}
+		function namee(){
+			n -= 1
+			 text.innerHTML = n;
+		}
+		
+	</script>
+</body>
+</html>

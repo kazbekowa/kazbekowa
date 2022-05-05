@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .card{
+            width:500px;
+            height: 40px;
+            position: absolute;
+            left: 400px;
+            border: 1px solid black;  top: 230px;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="inp" onclick="checkbox_()" value="yellow" type="checkbox"/>
+    <label for="inp">yellow</label>
+     
+
+    </div>
+    
+    <!-- <input id="brr" class="card" type="password" name="" placeholder="Пароль"/>
+    <button id="trr" class="wrapper" >Показать пароль</button> -->
+  
+   <script>
+       let body_ = document.body
+       
+       
+        
+    function checkbox_ (){
+            if(inp.checked){
+                body_.style.backgroundColor = 'yellow'
+                localStorage.setItem('color', 'yellow')
+               
+            }else{
+                body_.style.backgroundColor = 'white' 
+                localStorage.setItem('color', 'white')
+               
+            }
+
+        }  
+
+        let g = localStorage.getItem('color')
+        
+        
+        if(g == 'yellow'){
+                body_.style.backgroundColor = 'yellow'
+                localStorage.setItem('color', 'yellow')
+                inp.checked = true;
+            }else{
+                body_.style.backgroundColor = 'white' 
+                localStorage.setItem('color', 'white')
+                inp.checked = false;
+            }
+    </script>
+            border-radius: 20px;
+            top: 230px;
+        }
+        .wrapper{
+            width:220px;
+            height: 45px;
+            border-radius: 20px;
+            position: absolute;
+            left: 900px;
+          
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="div_">
+
+    </div> -->
+    <!-- +west2 + 1 -->
+    <script>
+        let west = [1,2,9,9,1]
+        let west1 = [];
+
+        let west2 = ''
+        
+        let ff = true
+        // west.map((e, i) => ){}
+        //    +west2 += west  
+        // })
+        west.map((e, i) => {
+            west2 += e;
+            })
+        for(let r = west2.length - 1; r >= 0; r--){
+            if(west2[r] == '9' && ff){
+                west1.push(0)
+            }else if(ff){
+                ff = false;
+                west1.push(+west2[r] + 1)
+            }else{
+                west1.push(+west2[r])
+            }
+           
+        }
+
+
+        // for(let i = 0; i <  west2.length - 1; i++){
+        //     if(west2[i] == '9' && ff){
+        //         west1.push(0)
+        //     }else if(ff){
+        //         ff = false;
+        //         west1.push(+west2[i] + 1)
+        //     }else{
+        //         west1.push(+west2[i])
+        //     }
+        // }
+            
+        console.log(west1)
+        // if(west2 == west){
+        //    +west2 + 1
+        // }else{
+        //     +west3 + 1
+        // }
+        
+    </script>
+</body>
+</html>

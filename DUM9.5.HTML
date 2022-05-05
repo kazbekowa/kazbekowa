@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+    <div id="p">
+		
+	</div>
+    <h1 id="text"></h1>
+    <script>
+       const TEXT = prompt('');
+       let p = document.getElementById('p')
+        const ELEMENT = document.getElementsByTagName('span');
+        let index = 0;
+     
+        for (let i = 0; i < TEXT.length; i++){
+            text.innerHTML += `<span>${TEXT[i]}</span>`;
+        }
+        document.body.onkeydown = (coin) => {
+        
+        if(coin.keyCode == 8 && index > 0){  
+            index -= 1
+            
+             ELEMENT[index].style.color = 'black'     
+            } else{
+                 if(ELEMENT[index].innerHTML != coin.key){
+                    ELEMENT[index].style.color = 'red'
+                     
+                 }else{
+                    ELEMENT[index].style.color = 'green' 
+                 }
+                 index++
+             }
+         }
+    </script>
+</body>
+</html>

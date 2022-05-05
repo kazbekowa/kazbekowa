@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.wrapper{
+			width: 150px;
+			height: 35px;
+			border: 3px solid red;
+			margin-left: 25%;
+			margin-top: 10%;
+			background-color: #DCDCDC;
+			border-radius: 5px;
+		}
+		.card{
+			width: 150px;
+			height: 35px;
+			border: 3px solid red;
+			background-color: #DCDCDC;
+			border-radius: 5px;
+		}
+		.but{
+			width: 200px;
+			height: 40px;
+			border: 3px solid royalblue;
+			background-color: powderblue;
+			font-size: 20px;
+			border-radius: 5px;
+		}
+		.br{
+			display: flex;
+			margin-left: 340px;
+			margin-top: 20px;
+			width: 160px;
+			height: 40px;
+			border: 3px solid red;
+			background-color: #FFC0CB;	
+			border-radius: 5px;
+		}
+		.tr{
+			display: flex;
+			margin-left: 505px;
+			margin-top: -40px;
+			width: 160px;
+			height: 40px;
+			border: 3px solid red;
+			background-color: #FFC0CB;	
+			border-radius: 5px;
+		}
+		.textt{
+			display: flex;
+			margin-left: 670px;
+			margin-top: -40px;
+			width: 196px;
+			height: 40px;
+			border-radius: 5px;
+			border: 3px solid red;
+			background-color: #FFC0CB;
+		}
+	</style>
+</head>
+<body>
+	<input class="wrapper" id="input" type="number" name="">
+	<input class="card" id="input_" type="number" name="">
+
+	<button class="but" onclick="name_()">Добавить</button>
+	<button class="br" onclick="namenn()">+</button>
+	<button class="tr" onclick="namen()">-</button>
+	<button class="textt" onclick="namenp()">/</button>
+	<ul id="asan"></ul>
+	<script type="text/javascript">
+		let d = document.getElementById('input')
+		let p = document.getElementById('asan')
+		let f = document.getElementById('input_')
+
+	function name_(){
+		p.innerHTML += `<li>${d.value * f.value}</li>`
+		// p.innerHTML += `<li>${f.value}</li>`
+				d.value = '';
+	}
+	function namenn(){
+		p.innerHTML += `<li>${+d.value + +f.value}</li>`
+		d.value = '';
+	}
+	function namen(){
+		p.innerHTML =	`<li>${+d.value - +f.value}</li>`
+		d.value = '';
+	}
+	function namenp(){
+		p.innerHTML = `<li>${+d.value / +f.value}</li>`
+		d.value = '';
+	}
+</script>
+</body>
+</html>

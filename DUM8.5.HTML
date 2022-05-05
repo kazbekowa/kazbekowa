@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <div id="p">
+		
+	</div>
+	<script type="text/javascript">
+		let body_ = document.body;
+		let p = document.getElementById('p')
+		
+			
+			// body_.onkeypress = (asan) => {
+			// 	body_.innerHTML += asan.key
+			// 	console.log(asan)
+			// 	let text = '';
+			body_.onkeypress = (coin) => {
+                
+             if(coin.keyCode == 13){
+                p.style.color = 'red' 
+             }
+             else{
+                p.innerHTML += coin.key
+             }
+            
+		}
+	</script>
+
+</body>
+</html>

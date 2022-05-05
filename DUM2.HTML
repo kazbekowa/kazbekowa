@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	
+</head>
+<body id="asan">
+	<!-- <div style="background-color: red, green, blue, black;" id="asan">
+		
+	</div> -->
+	<script type="text/javascript">
+		let color = prompt('backgroundColor body')
+		// div.innerHTML +=  `<span style='color: green'>${color}</span>`
+
+		let body = document.getElementById('asan');
+
+		switch(color){
+			case'кызыл': body.style.backgroundColor = 'red'
+				break;
+			case 'жашыл': body.style.backgroundColor = 'green'
+				break;
+			case 'кок': body.style.backgroundColor = 'blue'
+				break;
+			case 'сары': body.style.backgroundColor = 'yellow'
+				break;
+			default: console.log('NO')
+		}
+		// document.body.style.backgroundColor = color
+	</script>
+</body>
+</html>

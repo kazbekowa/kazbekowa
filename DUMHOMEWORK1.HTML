@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.wrapper{
+			width: 150px;
+			height: 60px;
+			border-radius: 6px;
+			font-size: 20px;
+			margin-left: 600px;
+			margin-top: 20px;
+			color: #FF0000;
+			background-color: green;
+			color: white;
+			border: none+;
+		}
+		.index{
+			
+			text-align: center;
+			
+		}
+		img{
+			width: 650px;
+			height: 500px;
+			margin-top: 20px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	
+	<button class="wrapper" id="div" onclick="n()">Показать</button>
+	<div class="index" id="text" onclick="number_()"></div>
+	<script type="text/javascript">
+		let div = document.getElementById('div')
+		// console.log(div.innerHTML)
+		let text = document.getElementById('text')
+	
+		function n (){
+
+			if(div.innerHTML == 'Показать'){
+				div.style.backgroundColor = 'red'
+				div.innerHTML = 'Скрыть'
+				text.innerHTML = '<img src="https://kafanews.com/new/images/muftiyat-kryma-prizval-musulman-ne-verit-lshivoy-reklame-khadsha_foto-iz-seti-internet_1_2016-05-10-13-56-48.jpeg" onclick="number()">'
+                 
+
+			}else{
+				div.innerHTML = 'Показать'
+				div.innerHTML == 'Скрыть'
+				div.style.backgroundColor = 'green'
+				text.innerHTML = ''
+
+			}
+			
+		}
+
+	</script>
+	</body>
+</html>

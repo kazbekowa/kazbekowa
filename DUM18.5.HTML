@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<div id="div_"></div>
+<body>
+    <input id="inp2" value="#00FFFF" type="checkbox"/>
+    <label for="inp2">skyblue</label>
+
+    <input id="inp3" value="violet" type="checkbox"/>
+    <label for="inp3">violet</label>
+    <div class="text">
+
+    <input id="inp" placeholder="text"/>
+    <button onclick="addlocal()">OK</button>
+    <script>
+        
+        function addlocal(){
+             localStorage.setItem('asan', inp.value);
+            div_.innerHTML = localStorage.getItem('asan');
+            inp.value = '';
+            localStorage.setItem('asan', inp2.value);
+            div_.innerHTML = localStorage.getItem('asan');
+            localStorage.setItem('asan', inp3.value);
+            div_.innerHTML = localStorage.getItem('asan');
+        }
+            div_.innerHTML = localStorage.getItem('asan');
+            
+            let body_ = document.body
+    inp.onclick = function(e){
+            checkbox_(e.target.value, e.target.checked)
+                }
+        inp2.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)     
+           }
+        inp3.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)
+        }
+    function checkbox_ (e, b){
+console.log(e)
+                if(e == '#00FFFF' && b  == true){
+                    body_.style.backgroundColor = '#00FFFF'
+                    inp.checked = false;
+                    inp3.checked = false;
+
+                // }else if(e == 'yellow' && b ==true){
+                //     body_.style.backgroundColor = 'yellow'
+                //     inp3.checked = false;
+                //     inp2.checked = false;
+                }else if(e == 'violet' && b ==true){
+                    body_.style.backgroundColor = 'violet'
+                    inp2.checked = false;
+                    inp.checked = false;
+                }else{
+                    body_.style.backgroundColor = 'white'
+                }
+        }  
+    </script>
+</body>
+</html>

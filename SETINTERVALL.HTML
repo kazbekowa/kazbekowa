@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div_" style="text-align: center; font-size: 200px; margin-top: 150px;"></div>
+    <script>
+         let west = 10;
+         let body_ = document.body
+         let div_ = document.getElementById('div_')
+         setInterval(() => {
+            div_.innerHTML = `<div>${west--}</div>`
+        if(west == 0){
+          west = 10;     
+        }
+        if(west == 8){
+            body_.style.backgroundColor = 'blue'
+    
+        }else if(west == 6){
+            body_.style.backgroundColor = 'violet'
+
+        }else if(west == 4){
+            document.body.style.backgroundColor = 'green'
+
+        }else if(west == 2){
+            document.body.style.backgroundColor = 'yellow'
+            
+        }    
+    }, 500)
+    </script>
+</body>
+</html>

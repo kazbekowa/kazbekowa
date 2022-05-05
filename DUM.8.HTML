@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.t{
+			font-size: 100px;
+			
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<!-- <div style="font-size: 50px" id="asan"></div> -->
+	<div class="t" id="asan">
+		
+	</div>	
+
+	<script type="text/javascript">
+		let truee = prompt('mistake')
+		let div = document.getElementById('asan')
+		for(let i = 0; i < truee.length; i++){
+			
+			if(i % 2 == 0){
+				div.innerHTML +=  `<span style='color: green'>${truee[i]}</span>`
+			}else{
+				div.innerHTML += `<span style='color: red'>${truee[i]}</span>`
+			}
+		}
+	</script>
+</body>
+</html>

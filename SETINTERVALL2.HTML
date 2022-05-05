@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .card{
+            width: 500px;
+            height: 500px;
+        } */
+        .card1{
+            width: 180px;
+            height: 564.1px;
+            border: 1px solid black;
+            position: absolute;
+            padding: 10px;
+            left: 500px;
+            border-radius: 25px;
+            background-color: grey;
+        }
+        .card2{
+            width: 180px;
+            height: 180px;
+            margin-top: 5px;
+            left: 50px;
+            border-radius: 100px;
+            border: 1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* background-color: #FF0800; */
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <!-- <img class="card" src="https://schukino.mos.ru/%D0%B0%D0%B7%D0%B1.jpg"> -->
+        <div class="card1">
+            <div class="card2">
+                
+            </div>
+            <div style="font-size: 90px;" id="div_" class="card2">
+                
+            </div>
+            <div class="card2">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        let west = 10;
+        let body_ = document.body
+        let div_ = document.getElementById('div_')
+        document.getElementById('text')
+         const dd = setInterval(() => {
+            div_.innerHTML = `<div>${west--}</div>`
+           
+            if(west == 0){
+            west = 10;     
+        }
+        if(west == 8){
+            
+    
+        }else if(west == 6){
+            
+
+        }else if(west == 4){
+            
+
+        }else if(west == 2){
+            
+            
+        }
+    }, 500)
+        setTimeout(() => {
+            clearInterval(dd)
+        }, 10000);
+    </script>
+</body>
+</html>

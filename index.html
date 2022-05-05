@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		@keyframes d1
+		{
+			0%{
+				left: 0;
+				top: 0;
+			}
+			25%{
+				left: 100%;
+				top: 0;
+				transform: translate(-100%,0);
+
+			}
+			50%{
+				left: 100%;
+				top: 100%;
+				transform: translate(-100%,-100%);
+
+			}
+			75%{
+				left: 0%;
+				top: 100%;
+				transform: translate(0,-100%);
+
+			}
+			100%{
+				left: 0;
+				top: 0;
+			}
+		}
+		.d{
+			
+			width: 500px;
+			height: 500px;
+			border: 2px solid black;
+			position: relative;
+		}
+		.d1{
+			width: 90px;
+			height: 90px;
+			background-color: green;
+			border: 2px solid black;
+			position: relative;
+				animation-name: d1;
+				animation-duration: 1s;
+				animation-iteration-count: infinite;
+				animation-direction: 1s;
+				animation-direction: alternate-reverse;
+		}
+	</style>
+</head>
+<body>
+	<div class="d">
+		<div class="d1"></div>
+		<div class="d2"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+	<style type="text/css">
+		.p1{
+			width: 600px;
+			height: 200px;
+			border: 1px solid black;
+			margin-left: 300px;
+			border-radius: 5px;
+			position: relative;
+			background-color: green;
+		}
+		.p1 > img{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: absolute;
+		}
+
+		.p1 > img:hover{
+			z-index: 4;
+		}
+		.p2{
+			z-index: 1;
+			left: 60px;
+			transform:translate(11%,);
+		}
+		.p3{
+			z-index: 2;
+			left: 120px;
+		}
+		.p4{
+			z-index: 3;
+			left: 180px;
+		}
+		.p5{
+			z-index: 2;
+			left: 240px;
+		}
+		.p6{
+			z-index: 1;
+			left: 300px;
+		}
+	</style>
+</head>
+<body>
+	<div class="p1">
+		<img class="p2" src="https://i.ytimg.com/vi/BnhAFD0LF3Q/maxresdefault.jpg">
+		<img class="p3" src="https://wallbox.ru/resize/1600x1200/wallpapers/main2/201647/14797812645833ab90555113.02883716.jpg">
+		<img class="p4" src="https://cdn.shopify.com/s/files/1/0135/9839/2378/products/Grapes_1_500x500.jpg?v=1554240819">
+		<img class="p5" src="https://5.imimg.com/data5/TA/SS/MY-3966004/banana-500x500.jpg">
+		<img class="p6" src="https://fastly.4sqi.net/img/general/600x600/398869057_1Q2bQhiNWPDGBYtEOAFrnQyJZctvSV8Ec3y8oGh1Vic.png">
+	</div>
+</body>
+</html>

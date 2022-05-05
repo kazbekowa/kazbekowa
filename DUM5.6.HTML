@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input id="input" type="number" name="">
+	<button class="but" onclick="name_()">Добавить</button>
+	<ul id="asan"></ul>
+	<script type="text/javascript">
+		let d = document.getElementById('input')
+		let p = document.getElementById('asan')
+	function name_(){
+		p.innerHTML += `<li>${d.value *2}</li>`
+		
+		d.value = '';
+	}
+</script>
+</body>
+</html>

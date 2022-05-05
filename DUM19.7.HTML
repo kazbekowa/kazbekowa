@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            border: 1px solid black;
+            width: 250px;
+            height: 95px;
+            
+        }
+        .wrapper{
+            position: absolute;
+            top: 50px;
+            left: 140px;
+            border-radius: 0px;
+            
+        }
+        .card1{
+           margin-left: 65px;
+           position: absolute;
+            top: 17px;
+        }
+        .fast{
+            position: absolute;
+            top: 50px;
+            left: 312px;
+            border-radius: 0px;
+           
+        }
+        .googl{
+            position: absolute;
+            top: 50px;
+            left: 345px;
+            border-radius: 0px;
+           
+        }
+        .group{
+            width: 258px;
+            position: absolute;
+            top: 80px;
+            left: 140px;
+        }
+        .card5{
+            width: 30px;
+            height: 19px;
+            position: absolute;
+            left: 228px;
+            background-color: violet;
+            border: none;
+        }
+        .erkinai{
+            background-color: violet;
+            margin: 5px
+
+        }
+        .wet{
+            color: blue;
+        }
+        .wet1{
+            color: red;
+        }
+        .wet2{
+            color: yellow;
+        }
+        .wet3{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="card"> -->
+        <!-- <span class="card1">MY TO DO LIST</span> -->
+        <div id="textt" style=" font-size: 30px; position: absolute; left:220px;">
+            <span class="wet">G</span><span class="wet1">o</span><span class="wet2">o</span><span class="wet">g</span><span class="wet3">l</span><span class="wet1">e</span></div>
+        <button class="fast" onclick="add()">OK</button>
+        
+        <button class="googl" onclick="add1()">Delete</button>
+    <!-- </div> -->
+        <input class="wrapper" id="text1" type="search" placeholder="Окей ГУГЛ"/>
+        
+        <div class="group" id="text">
+           
+        </div>
+   
+    <script>
+        // let removen = document.getElementsByTagName('span')
+        let pp = document.getElementById('textt')
+        let inp = document.getElementById('text1')
+        const ELEMENT_ = document.getElementById('text')
+        let besoft = JSON.parse(localStorage.getItem('key')) || [];
+        function add(){
+            console.log(inp.value.length);
+            if(inp.value.length > 0){
+                besoft.push(inp.value);
+            }
+            
+            inp.value = '';
+            localStorage.setItem('key', JSON.stringify(besoft))
+            ELEMENT_.innerHTML = '';
+            Map_()
+        }
+        Map_()
+    function add1(){
+        localStorage.removeItem('key')
+        ELEMENT_.innerHTML = ''
+        besoft = [];
+    }
+    function namen(i){
+     besoft.splice(i, 1);
+        localStorage.setItem("key", JSON.stringify(besoft));
+console.log(besoft)
+ELEMENT_.innerHTML = ''
+        Map_()
+    }
+    function Map_(){
+        besoft.map((e, i )=> {
+            ELEMENT_.innerHTML += `<div class="erkinai">${i+1}  ${e}
+            <button onclick="namen(${i})" class="card5">X</button>
+            </div>`
+            })
+    }
+    </script>
+</body>
+</html>

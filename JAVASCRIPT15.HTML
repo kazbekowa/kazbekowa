@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		const number = prompt('number')
+		// const nums = +prompt('Канча акча аласыз?')
+		// const heart = prompt('Сизде ушунча акча калды')
+		// r[i].price = r[i].price - number
+		let r = [
+			{password: 5010, price: 1000,},
+			{password: 6010, price: 2500,},
+			{password: 4510, price: 1200,},
+			{password: 3510, price: 4500,},
+	    ]
+
+	    for(let i = 0; i < r.length; i++){
+	    	if(number == r[i].password){
+	    			 alert(r[i].price)
+	    			 i = r.length
+	    	}else if(i == r.length - 1){
+	    		alert('error')
+	    	}
+	    }
+	   
+	    
+	</script>
+</body>
+</html>

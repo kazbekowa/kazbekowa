@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    .q{
+      background-color: violet;
+      color:black;
+      margin-right: 0px;
+      border-top-left-radius:  10px;
+      border-top-right-radius: 10px;
+    }
+    .q1{
+      margin-left:  -10px;
+      background-color: violet;
+      color:black;
+      border-top-right-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+    <input id="inp" value="yellow" type="checkbox"/>
+    <label for="inp">yellow</label>
+
+    <input id="inp2" value="#00FFFF" type="checkbox"/>
+    <label for="inp2">skyblue</label>
+
+    <input id="inp3" value="violet" type="checkbox"/>
+    <label for="inp3">violet</label>
+    <div class="text">
+
+  <input class="q" id="por"   value="" type="password" name="">
+  <button class="q1" id="w1" onclick="sa()">показать пороль</button>
+  <div></div>
+
+  <script type="text/javascript">
+
+    let s = document.getElementById('por')
+
+    function sa() {
+      
+      if (s.type == 'text') {
+        s.type = 'password'
+        w1.innerHTML = 'показать пороль';
+      }else{
+        s. type = 'text'
+        w1.innerHTML = 'скрыть'
+      }
+    }
+    let body_ = document.body
+    inp.onclick = function(e){
+            checkbox_(e.target.value, e.target.checked)
+                }
+        inp2.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)     
+           }
+        inp3.onclick = function(e) {
+            checkbox_(e.target.value, e.target.checked)
+        }
+    function checkbox_ (e, b){
+console.log(e)
+                if(e == '#00FFFF' && b  == true){
+                    body_.style.backgroundColor = '#00FFFF'
+                    inp.checked = false;
+                    inp3.checked = false;
+
+                }else if(e == 'yellow' && b ==true){
+                    body_.style.backgroundColor = 'yellow'
+                    inp3.checked = false;
+                    inp2.checked = false;
+                }else if(e == 'violet' && b ==true){
+                    body_.style.backgroundColor = 'violet'
+                    inp2.checked = false;
+                    inp.checked = false;
+                }else{
+                    body_.style.backgroundColor = 'white'
+                }
+        }  
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.t{
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.div{
+			
+			width: 100px;
+			height: 100px;
+			border-radius: 500px;
+			border: 1px solid black;
+			display: flex;
+			font-size: 50px;
+			color: white;
+			align-items: center;
+			justify-content: center;
+			margin-left: 15px;
+			margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="t" id="number">
+		
+	</div>
+	<script type="text/javascript">
+		let p = +prompt('N?')
+		let div = document.getElementById('number')
+		let color = ['#FF00FF', '#00FF00','#1E90FF','yellow','#00FFFF','#C0C0C0']
+
+		let r = 0;
+		for(let i = p; i > 0; i--){
+			
+			div.innerHTML += `
+			<div style='background-color: ${color[r]}' class="div">${i}</div>`;r++
+			if (r == 6) {
+				r = 0;
+			}
+		}
+
+	</script>
+</body>
+</html>

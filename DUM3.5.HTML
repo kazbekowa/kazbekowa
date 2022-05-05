@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.wrapper{
+			width: 150px;
+			height: 60px;
+			border-radius: 6px;
+			font-size: 20px;
+			margin-left: 600px;
+			margin-top: 20px;
+			color: #FF0000;
+			background-color: green;
+			color: white;
+			border: none;
+		}
+		.index{
+			
+			text-align: center;
+			
+		}
+		img{
+			width: 650px;
+			height: 500px;
+			margin-top: 20px;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	
+	<button class="wrapper" id="div" onclick="n()">Добавить</button>
+	<div class="index" id="text" onclick="number()"></div>
+	<script type="text/javascript">
+		let div = document.getElementById('div')
+		// console.log(div.innerHTML)
+		let text = document.getElementById('text')
+		function n (){
+			if(div.innerHTML == 'Добавить'){
+				div.style.backgroundColor = 'red'
+				div.innerHTML = 'Удалить'
+				text.innerHTML = '<img  src="https://www.evaluate.com/sites/default/files/Yes%20you%20can%20sign.jpeg" onclick="number()">'
+
+			}else{
+				div.innerHTML = 'Добавить'
+				div.innerHTML == 'Удалить'
+				div.style.backgroundColor = 'green'
+				text.innerHTML = '<img src="https://img5.goodfon.ru/original/1920x1408/6/a5/kyrgyzstan-kirgiziia-flag-flag-kyrgyzstan-fon-red-krasnyi.jpg" onclick="number()">'
+
+			}
+			
+		}
+
+	</script>
+</body>
+</html>

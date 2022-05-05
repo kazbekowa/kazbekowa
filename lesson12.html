@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		button{
+			background-color: blue;
+			width: 130px;
+			height: 60px;
+			border-radius: 8px;
+			position: absolute;
+			left: 260px
+		}
+		.container{
+			width: 500px;
+			height: 350px;
+			margin-top: 100px;
+			background-color: white;
+			margin-left: 100px;
+			margin-right: 100px;
+			position: relative;
+			border: 1px solid black;
+			text-align: center;
+			border-radius: 20px;
+			display: flex;
+			box-shadow: 2px 2px 3px;
+			overflow: hidden;
+		}
+		.container:hover>img{
+			left: 0px;
+			transition: 2s;
+		}
+		.box2{
+			width: 250px;
+			height: 300px;
+			margin-left: 200px;
+			
+		}
+		img{
+			width: 480px;
+			height: 350px;
+			position: absolute;
+			left: -400px;
+			border-radius: 20px;
+		}
+		.p1{
+			font-size: 30px;
+
+		}
+		button{
+			background-color: blue;
+			width: 130px;
+			height: 60px;
+			border-radius: 8px;
+			position: absolute;
+		}
+		.p2{
+			color: blue;
+			font-size: 20px;
+			/* position: absolute; */
+			left: 275px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<img src="https://www.polsov.com/upload/000/u4/000/f4b964a2.jpg">
+		<div class="box2">
+			<strong>
+				<p class="p1">Азиатская пицца</p>
+			</strong>
+			<p>Моцарелла, сладкий перец, томаты, красный лук, фарш из говядины</p>
+			<strong class="p2">От 395сом</strong>
+			<br>
+			<br>
+			<br>
+			<button>Заказать</button>
+		</div>
+	</div>
+</body>
+</html>
